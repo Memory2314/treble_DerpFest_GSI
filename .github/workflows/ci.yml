@@ -13,8 +13,8 @@ jobs:
     steps:
     - name: Check out
       uses: actions/checkout@v4
-    - name: ls
-      run: ls
+    - name: Setup Repo
+      run: sudo apt-get install repo
     - name: Build
       run: bash build.sh
     - name: ls
