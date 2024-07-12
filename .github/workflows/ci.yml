@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ "14" ]
+  pull_request:
+    branches: [ "14" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out
+      uses: actions/checkout@v4
+    - name: Build
+      run: bash treble_DerpFest_GSI/build.sh
+    - name: ls
+      run: |
+        ls
+        cd build
+        ls
