@@ -13,10 +13,14 @@ jobs:
     steps:
     - name: Check out
       uses: actions/checkout@v4
+      with:
+        path: treble_DerpFest_GSI
     - name: Setup Repo
       run: sudo apt-get install repo
+    - name: ls
+      run: ls
     - name: Build
-      run: bash build.sh
+      run: bash treble_DerpFest_GSI/build.sh
     - name: ls
       run: |
         ls
