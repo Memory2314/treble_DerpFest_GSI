@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Check out
       uses: actions/checkout@v4
+    - name: ls
+       run: ls
     - name: Build
       run: bash treble_DerpFest_GSI/build.sh
     - name: ls
